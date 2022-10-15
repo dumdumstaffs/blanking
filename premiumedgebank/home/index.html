@@ -1,12 +1,10 @@
 ﻿<!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
-<!-- Mirrored from premiumedgebank.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Oct 2022 20:24:07 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Premium Edge Bank - Banking, Loan & Insurance</title>
   <meta name="description" content="">
@@ -14,10 +12,9 @@
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
 
   <!-- Web Font -->
-  <link
-    href="css20db5.html?family=Montserrat:wght@300;400;500;600;700;800;900&amp;family=Roboto:wght@300;400;500&amp;display=swap"
-    rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- CSS here -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -29,6 +26,36 @@
   <link rel="stylesheet" href="css/glightbox.min.css">
   <link rel="stylesheet" href="css/typography.html">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .brand-logo {
+      display: flex; 
+      align-items: center; 
+      gap: 8px;
+    }
+
+    .brand-logo > img {
+      width: 30px !important;
+      height: 30px !important;
+    }
+
+    .brand-logo > span {
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .sticky .brand-logo > img {
+      transform: translateY(-160px);
+      transition: transform 1.4s ease-out;
+    }
+
+    .sticky .brand-logo > span {
+      color: var(--main-color-one);
+      transform: translateX(-38px);
+      transition: transform 0.7s ease-out;
+    }
+  </style>
 
   <!--[if lte IE 9]>
       <p class="browserupgrade">
@@ -54,8 +81,9 @@
             <!-- Start Navbar -->
             <nav class="navbar navbar-expand-lg">
               <a class="navbar-brand style3" href="/">
-                <div style="display: flex; align-items: center; gap: 8px;">
-                  <img src="images/logo.png" alt="Logo" style="width: 40px; height: 40px;">
+                <div class="brand-logo">
+                  <img src="images/logo.png" alt="Logo">
+                  <span>Premium Edge Bank</span>
                 </div>
               </a>
               <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
@@ -670,7 +698,5 @@
     });
   </script>
 </body>
-
-<!-- Mirrored from premiumedgebank.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Oct 2022 20:24:43 GMT -->
 
 </html>
