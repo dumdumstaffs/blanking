@@ -27,36 +27,6 @@
   <link rel="stylesheet" href="css/typography.html">
   <link rel="stylesheet" href="style.css">
 
-  <style>
-    .brand-logo {
-      display: flex; 
-      align-items: center; 
-      gap: 8px;
-    }
-
-    .brand-logo > img {
-      width: 30px !important;
-      height: 30px !important;
-    }
-
-    .brand-logo > span {
-      color: white;
-      font-size: 20px;
-      font-weight: 600;
-    }
-
-    .sticky .brand-logo > img {
-      transform: translateY(-160px);
-      transition: transform 1.4s ease-out;
-    }
-
-    .sticky .brand-logo > span {
-      color: var(--main-color-one);
-      transform: translateX(-38px);
-      transition: transform 0.7s ease-out;
-    }
-  </style>
-
   <!--[if lte IE 9]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.
@@ -146,9 +116,8 @@
                 <a class="btn btn-one wow fadeInLeft" data-wow-delay="1.2s"
                   href="https://online.premiumedgebank.com/signup">Get Started <i
                     class="lni lni-angle-double-right"></i></a>
-                <a class="btn btn-two glightbox video-button wow fadeInLeft" data-wow-delay="1.5s"
-                  href="https://online.premiumedgebank.com/signin"><i class="lni lni-play"></i><span class="text">Login
-                    account</span></a>
+                <a class="btn btn-two wow fadeInLeft" data-wow-delay="1.5s"
+                  href="https://online.premiumedgebank.com/signin"><i class="lni lni-lock"></i><span class="text">Sign In</span></a>
               </div>
             </div>
           </div>
@@ -178,7 +147,7 @@
             <div class="card-body">
               <div class="section-title mb-30 wow fadeInRight" data-wow-delay=".6s">
                 <h6 class="card-subtitle">ABOUT COMPANY</h6>
-                <h2 class="card-title">Bond Trusted National. The bank of the online investor.</h2>
+                <h2 class="card-title">Premium Edge Bank, The bank of the online investor.</h2>
                 <p class="card-text">Premium Edge Bank was founded in 1999 to introduce the new level of financial
                   services worldwide. We are still dedicated to the success of our clients.<br>
 
@@ -686,15 +655,6 @@
           items: 2,
         }
       }
-    });
-    /* glightbox
-    -----------------------*/
-    GLightbox({
-      'href': 'https://www.youtube.com/watch?v=UwPrJmOxPeI',
-      'type': 'video',
-      'source': 'youtube',
-      'width': 900,
-      'autoplayVideos': true,
     });
   </script>
 </body>

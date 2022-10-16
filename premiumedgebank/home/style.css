@@ -3275,3 +3275,31 @@ table tr td, th{
 		padding: 20px;
 	}
 }
+
+.brand-logo {
+	display: flex; 
+	align-items: center; 
+	gap: 8px;
+}
+
+.brand-logo > img {
+	width: 30px !important;
+	height: 30px !important;
+}
+
+.brand-logo > span {
+	color: white;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.sticky .brand-logo > img {
+	transform: translateY(-160px);
+	transition: transform 1.4s ease-out;
+}
+
+.sticky .brand-logo > span {
+	color: var(--main-color-one);
+	transform: translateX(-38px);
+	transition: transform 0.7s ease-out;
+}
