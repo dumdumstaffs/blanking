@@ -51,7 +51,7 @@ html {
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'DM Sans', 'Roboto', sans-serif;
 	font-weight: 500;
 	font-style: normal;
 	color: #575a7c;
@@ -64,7 +64,7 @@ p {
 	padding: 0;
 	font-size: 16px;
 	line-height: 1.8;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'DM Sans', 'Roboto', sans-serif;
 	font-weight: 500;
 }
 
@@ -169,7 +169,7 @@ h6 {
 	font-weight: 600;
 	margin: 0px;
 	line-height: 1.3;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'DM Sans', sans-serif;
 	transition: all linear .3s;
 }
 
@@ -226,8 +226,8 @@ li{
 }
 
 :root {
-  --main-color-one: #f12711;
-  --main-color-two: #015eea;
+  --main-color-one: #00b0ff;
+  --main-color-two: #00ffcf;
 }
 
 /* Spacing */
@@ -1073,7 +1073,7 @@ table tr td, th{
 }
 
 #banner-section{
-	background: url(images/banner.jpg);
+	background: url('/images/hero/woman-on-red.jpeg');
 	background-attachment: fixed;
 	background-position: bottom;
 	background-repeat: no-repeat;
@@ -1115,7 +1115,7 @@ table tr td, th{
 	width: 45px;
 	height: 45px;
 	line-height: 45px;
-	background: var(--main-color-two);
+	background-image: linear-gradient(90deg, var(--main-color-one) 18%, var(--main-color-two));
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1433,14 +1433,8 @@ table tr td, th{
 }
 
 .header.sticky .button .btn {
-	background-color: var(--main-color-two);
 	color: #fff;
 	border-color: transparent;
-}
-
-.header.sticky .button .btn:hover {
-	background-color: var(--main-color-one);
-	color: #fff;
 }
 
 .sticky {
@@ -1463,10 +1457,6 @@ table tr td, th{
 .demo-nav .navbar-expand-lg .navbar-nav {
 	margin-left: auto !important;
 	margin-right: 60px !important;
-}
-
-.header .navbar .navbar-nav .nav-item a.active {
-	color: var(--main-color-one);
 }
 
 .sticky .navbar .navbar-nav .nav-item a.active {
@@ -1571,7 +1561,8 @@ table tr td, th{
 }
 
 .navbar-nav .nav-item:hover a {
-	color: var(--main-color-one);
+	text-decoration: underline;
+	text-underline-offset: 4px;
 }
 
 .sticky .navbar-nav .nav-item:hover a {
@@ -1608,7 +1599,8 @@ table tr td, th{
 }
 
 .navbar-nav .nav-item a.active {
-	color: var(--main-color-one);
+	text-decoration: underline;
+	text-underline-offset: 4px;
 }
 
 .navbar-nav .nav-item a.dd-menu::after {
@@ -1760,16 +1752,11 @@ table tr td, th{
 	margin-right: 5px;
 }
 
-.add-list-button a{
-	background: var(--main-color-two);
+.add-list-button a {
+	background-image: linear-gradient(90deg, var(--main-color-one) 18%, var(--main-color-two));
 	color: #fff;
 	padding: 15px 20px;
-	border-radius: 50px;
-}
-
-.add-list-button a:hover{
-	background: var(--main-color-one);
-	color: #fff;
+	border-radius: 4px;
 }
 
 /* -------------------------------------
@@ -1777,20 +1764,32 @@ table tr td, th{
 ------------------------------------- */
 .hero-area.style1 {
 	position: relative;
-	background: url(images/hero/hero.jpg);
+	background: url('/images/hero/hero.webp');
+	background-position: center;
+	background-size: cover;
+	z-index: 10;
+}
+
+.hero-area.style1:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -10;
+	/* background: url('/images/hero/pattern.png'); */
+	background: linear-gradient(rgba(0,0,0,0.228), rgba(0,0,0,0.228)), url('/images/hero/pattern.png');
 	background-position: center;
 	background-size: cover;
 }
 
 .hero-area.style1 .hero-overlay{
-	background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,.3));
 	padding: 235px 0;
 }
 
 .hero-area .hero-content{
 	max-width: 900px;
-	margin: auto;
-	text-align: center;
 }
 
 .hero-area .hero-content .sub_title{
@@ -1800,39 +1799,37 @@ table tr td, th{
 }
 
 .hero-area .hero-content h1 {
-	font-size: 74px;
-	line-height: 1.1;
-	color: var(--main-color-one);
-}
-
-.hero-area .hero-content h3 {
-	display: block;
-	font-size: 36px;
+	font-size: 3.75rem;
+    line-height: 3.75rem;
+    letter-spacing: -.0083333333em;
 	color: #fff;
-	font-weight: 500;
-	line-height: 1.1;
+	margin-top: 20px;
 }
 
 .hero-area .hero-content p {
-	margin-top: 30px;
-	font-size: 18px;
-	font-weight: 600;
-	color: #ddd;
+	display: block;
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: 300;
+	line-height: 1.1;
+	margin-top: 20px;
+}
+
+.btn {
+	border: none;
+}
+
+.btn:hover {
+    color: #fff;
 }
 
 .btn-one{
 	padding: 15px 20px;
-	background: var(--main-color-two);
+	background-image: linear-gradient(90deg, var(--main-color-one) 18%, var(--main-color-two));
 	color: #fff;
-	border-radius: 50px;
-	margin-right: 10px;
+	border-radius: 4px;
+	margin-right: 20px;
 	transition: .3s;
-}
-
-.btn-one:hover{
-	background: transparent;
-	border: 1px solid var(--main-color-two);
-	color: var(--main-color-two);
 }
 
 .btn-two{
@@ -1857,17 +1854,6 @@ table tr td, th{
 	color: #fff;
 }
 
-/* max with 991px */
-@media only screen and (min-width:768px) and (max-width: 991px){
-	.hero-area .hero-content h1 {
-		font-size: 52px;
-	}
-
-	.hero-area .hero-content h3 {
-		font-size: 36px;
-	}
-}
-
 /* max with 767px */
 @media only screen and (min-width: 320px) and (max-width: 767px){
 	.hero-area.style1 .hero-overlay {
@@ -1879,12 +1865,14 @@ table tr td, th{
 	}
 
 	.hero-area .hero-content h1 {
+		line-height: 1.2;
 		font-size: 42px;
+		margin-top: 40px;
 	}
 
-	.hero-area .hero-content h3 {
-		font-size: 24px;
-		margin-top: 10px;
+	.hero-area .hero-content p {
+		font-size: 20px;
+		margin-top: 40px;
 	}
 
 	.btn-one {
@@ -2474,7 +2462,7 @@ table tr td, th{
 }
 
 #testimonial-section .tns-nav button:hover, #testimonial-section .tns-nav button.tns-nav-active {
-	background: linear-gradient(to right, rgba(241, 39, 17, .9), rgba(241, 39, 17, .4))
+	background: linear-gradient(90deg, var(--main-color-one) 18%, var(--main-color-two))
 }
 #testimonial-section .tns-nav button.tns-nav-active{
 	width: 40px;
@@ -3283,23 +3271,6 @@ table tr td, th{
 }
 
 .brand-logo > img {
-	width: 30px !important;
-	height: 30px !important;
-}
-
-.brand-logo > span {
-	color: white;
-	font-size: 20px;
-	font-weight: 600;
-}
-
-.sticky .brand-logo > img {
-	transform: translateY(-160px);
-	transition: transform 1.4s ease-out;
-}
-
-.sticky .brand-logo > span {
-	color: var(--main-color-one);
-	transform: translateX(-38px);
-	transition: transform 0.7s ease-out;
+	width: 120px !important;
+	height: 40px !important;
 }
