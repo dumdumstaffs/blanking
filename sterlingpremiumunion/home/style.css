@@ -1764,7 +1764,7 @@ table tr td, th{
 ------------------------------------- */
 .hero-area.style1 {
 	position: relative;
-	background: url('/images/hero/hero.webp');
+	background: url('/images/hero/hero.jpg');
 	background-position: center;
 	background-size: cover;
 	z-index: 10;
